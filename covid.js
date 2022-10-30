@@ -2,7 +2,7 @@ var worldData = "";
 worldInit();
 worldCountries();
 countryInit();
-var countryInit = "";
+var countryData = "";
 function worldInit() {
   var url = "https://api.covid19api.com/summary";
   $.get(url, function (worldData) {
@@ -44,7 +44,7 @@ function countryInit() {
     for (var count = 0; count <= countryData.Countries.length; count++) {
       var selected = $("#selectCountry").find("option:selected").text();
       if (countryData.Countries[count].Country == selected) {
-        var percentageOfCountryDeath =
+        percentageOfCountryDeath =
           (countryData.Countries[count].TotalConfirmed /
             countryData.Countries[count].TotalDeaths) *
           100;
@@ -58,5 +58,6 @@ function countryInit() {
         break;
       }
     }
+    // console.log(countryData);
   });
 }
