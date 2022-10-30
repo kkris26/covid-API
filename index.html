@@ -11,6 +11,16 @@
       crossorigin="anonymous"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      #worldData td:nth-child(3) {
+        background-color: #dc3545;
+        color: white;
+      }
+      #countryData td:nth-child(3) {
+        background-color: #dc3545;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -19,7 +29,7 @@
       <!-- world data -->
       <table class="table table-hover">
         <tr>
-          <th class="bg-primary text-white">Entire World Data</th>
+          <h1 class="bg-primary text-white p-2">Entire World Data</h1>
         </tr>
         <tr>
           <th>TOTAL CASE</th>
@@ -34,24 +44,29 @@
       <br />
       <br />
       <!-- country selector dropdown-->
-      <form action=""  id="formCountry">
-        <select name="" id="selectCountry" onchange="countryInit" class="p-2 bg-info border-0 text-white rounded-1" >
+      <form action="" id="formCountry">
+        <select
+          name=""
+          id="selectCountry"
+          onchange="countryInit"
+          class="p-2 bg-info border-0 text-white rounded-1"
+        >
           <option value="">--Choose a Country--</option>
         </select>
       </form>
       <!-- country selector -->
-      <br>
-      <br>
+      <br />
+      <br />
 
       <!-- country data -->
       <table class="table table-hover">
         <tr>
-          <th class="bg-primary text-white">Country Based Data</th>
+          <h1 class="bg-primary text-white p-2">Country Based Data</h1>
         </tr>
         <tr>
           <th>TOTAL CASE</th>
           <th>TOTAL RECOVERED</th>
-          <th class="bg-danger  text-white">TOTAL DEATHS</th>
+          <th class="bg-danger text-white">TOTAL DEATHS</th>
           <th>PERCENTAGE OF RECOVERED</th>
         </tr>
         <tr id="countryData"></tr>
